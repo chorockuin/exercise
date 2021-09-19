@@ -65,11 +65,8 @@ a2 = np.load("35.npy")
 print(a2)
 print(np.array_equal(a1, a2))
 #36
-
 #37
-
 #38
-
 #39
 l = [1,2,3,4,5,6]
 a = np.array(l)
@@ -129,3 +126,66 @@ print(a1)
 print(a2)
 #59
 print(np.array([[0,1],[2,3]]) * np.array([[3,2],[1,0]]))
+
+#1
+print(np.__version__)
+#2
+print(np.array([1,2,3,4]))
+#3
+print(np.arange(2,11).reshape(3,3))
+#4
+a = np.zeros(10)
+a[6] = 11
+print(a)
+#5
+print(np.arange(12,38))
+#6
+print(np.arange(12,38)[::-1])
+#7
+print(np.array([1,2,3,4], dtype=np.float32))
+print(np.asfarray([1,2,3,4]))
+#8
+a = np.ones([5,5])
+a[1:-1, 1:-1] = 0
+print(a)
+#9
+a = np.ones([5,5])
+a[0, :] = 0
+a[-1, :] = 0
+a[:, 0] = 0
+a[:, -1] = 0
+print(a)
+a = np.pad(a, pad_width=1, mode="constant", constant_values=0)
+print(a)
+#10
+a = np.zeros((8,8))
+a[0::2, 1::2] = 1
+a[1::2, 0::2] = 1
+print(a)
+#11
+print(np.array(([8,4,6], [1,2,3])))
+#12
+print(np.append(np.array([10,20,30]), [40,50,60,70,80,90]))
+#13
+a = np.empty((3,4))
+print(a)
+a = np.full((3,4), 6)
+print(a)
+#14
+#15
+#16
+a = np.array([1,2,3,4]).reshape(2,2)
+print(a.size, a.itemsize, a.nbytes)
+#17
+a1 = np.array([0,10,20,40,60])
+a2 = np.array([0,40])
+print(np.isin(a1, a2))
+print(np.in1d(a1, a2))
+#18
+print(np.intersect1d(a1, a2))
+#19
+print(np.unique([10,10,20,20,30,30]))
+print(np.unique([[1,1],[2,3]]))
+#20
+print(np.setdiff1d(a1, a2))
+
