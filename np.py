@@ -1,6 +1,47 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+#1
+print(np.__version__)
+print(np.show_config())
+#2
+print(np.info(np.add))
+#3
+print(np.all([1,2,3,4]))
+#4
+print(np.any([0,0,0,1]))
+#5
+print(np.isfinite([0,1,np.nan,np.inf]))
+#6
+print(np.isinf([0,1,np.nan,np.inf]))
+#7
+print(np.isnan([0,1,np.nan,np.inf]))
+#8
+x = np.array([1+1j, 1+0j, 4.5, 3, 2, 2j])
+print(np.iscomplex(x))
+print(np.isreal(x))
+print(np.isscalar(3.1))
+print(np.isscalar([3.1, 3.2]))
+#9
+#10
+x = [3,5]
+y = [2,5]
+print(np.greater(x,y))
+print(np.greater_equal(x,y))
+print(np.less(x,y))
+print(np.less_equal(x,y))
+#11
+#12
+x = np.array([1,7,13,105], dtype=np.float64)
+print(x.size, x.itemsize)
+#13
+print(np.ones(10), np.zeros(10), np.ones(10)*5)
+#14
+print(np.arange(30, 70))
+#15
+print(np.arange(30, 70, 2))
+#16
+print(np.identity(3))
 #17
 print(np.random.rand(1))
 #18
