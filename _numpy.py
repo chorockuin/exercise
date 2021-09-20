@@ -229,4 +229,38 @@ print(np.unique([10,10,20,20,30,30]))
 print(np.unique([[1,1],[2,3]]))
 #20
 print(np.setdiff1d(a1, a2))
-
+#21
+#22
+a1 = np.array([0,10,20,40,60,80])
+a2 = np.array([10,30,40,50,70])
+print(np.sort(np.append(a1, a2)))
+print(np.union1d(a1,a2))
+#23
+print(np.all([1,2,3,4]))
+print(np.all([0,2,3,4]))
+#24
+print(np.all([[1,2,3],[0,1,2]], axis=0))
+#25
+print(np.tile([1,0], 4))
+#26
+print(np.repeat([1,2,3], 2))
+#27
+print(np.max([[1,9,3], [4,5,0]], axis=0))
+print(np.min([1,2,3,4,5,6], axis=0))
+#28
+a1 = np.array([1,2])
+a2 = np.array([4,5])
+print(np.greater(a1, a2))
+print(np.greater_equal(a1, a2))
+print(np.less(a1, a2))
+print(np.less_equal(a1, a2))
+#29
+a = np.array([[4,6,0],[2,1,8]])
+print(a)
+print(np.sort(a, axis=0))
+print(np.sort(a, axis=1))
+#30
+f_names = ("Betsey", "Shelley", "Lanell", "Genesis", "Margery")
+l_names = ("Battle", "Brien", "Plotner", "Stahl", "Woolum")
+print(np.lexsort((f_names, l_names)))
+#31
